@@ -1,18 +1,18 @@
-package com.tech.arno.oreo.ui
+package com.tech.arno.oreo.ui.activity
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Typeface
-import android.os.Bundle
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import com.hazz.kotlinmvp.utils.AppUtils
-import com.tech.arno.oreo.MainActivity
 import com.tech.arno.oreo.MyApplication
 import com.tech.arno.oreo.R
 import com.tech.arno.oreo.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_splash.*
 import pub.devrel.easypermissions.EasyPermissions
+
 
 /**
  * 启动页
@@ -20,7 +20,9 @@ import pub.devrel.easypermissions.EasyPermissions
  * @author xin.xu
  * @date 2019-05-15
  */
+
 class SplashActivity : BaseActivity() {
+
 
     private var textTypeface: Typeface? = null
 
@@ -33,12 +35,14 @@ class SplashActivity : BaseActivity() {
         descTypeFace = Typeface.createFromAsset(MyApplication.context.assets, "fonts/FZLanTingHeiS-L-GB-Regular.TTF")
     }
 
+
     override fun layoutId(): Int = R.layout.activity_splash
 
     override fun initData() {
 
     }
 
+    @SuppressLint("SetTextI18n")
     override fun initView() {
 
         tv_app_name.typeface = textTypeface
@@ -62,20 +66,15 @@ class SplashActivity : BaseActivity() {
         checkPermission()
     }
 
+    override fun start() {
+
+    }
+
+
     fun redirectTo() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
-    }
-
-    override fun start() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
     }
 
     /**
@@ -102,4 +101,6 @@ class SplashActivity : BaseActivity() {
             }
         }
     }
+
+
 }

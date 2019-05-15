@@ -1,6 +1,7 @@
-package com.tech.arno.oreo
+package com.tech.arno.oreo.ui.activity
 
 import android.os.Bundle
+import com.tech.arno.oreo.R
 import com.tech.arno.oreo.base.BaseActivity
 
 class MainActivity : BaseActivity() {

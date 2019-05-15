@@ -2,10 +2,10 @@ package com.hazz.kotlinmvp.utils
 
 import android.content.Context
 import android.content.SharedPreferences
-import java.lang.reflect.InvocationTargetException
-import java.lang.reflect.Method
 import android.util.Base64
 import java.io.*
+import java.lang.reflect.InvocationTargetException
+import java.lang.reflect.Method
 
 
 /**
