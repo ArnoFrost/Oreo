@@ -7,7 +7,7 @@ package com.tech.arno.oreo.api
  * @date 2019-05-16
  */
 
-object UriConstant {
+object UrlConstant {
     const val BASE_URL = "http://baobab.kaiyanapp.com/api/"
 
 }
